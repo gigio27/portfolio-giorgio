@@ -1,4 +1,4 @@
-const Skills = () => {
+ const Skills = () => {
   return (
     <section id="skills">
       <h2>Tech stack</h2>

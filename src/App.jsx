@@ -2,7 +2,8 @@ import HeroSection from './components/HeroSection'
 import Projects from './components/Projects'
 import Skills from './components/Skills'
 import ContactForm from './components/ContactForm'
-import HeroParticles from './components/HeroParticles'
+import './index.css'
+
 
 function App() {
   return (
@@ -11,9 +12,8 @@ function App() {
       <Projects />
       <Skills />
       <ContactForm />
-      <HeroParticles/>
-
     </>
   )
 }
+
 export default App
