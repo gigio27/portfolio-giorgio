@@ -1,3 +1,5 @@
+import Tilt from 'react-parallax-tilt';
+
 const Projects = () => {
   return (
     <section id="projects" className="bg-black text-white py-20 px-4">
@@ -6,19 +8,34 @@ const Projects = () => {
           Selected projects
         </h2>
 
-        <ul className="space-y-6 text-left">
-          <li className="border border-gray-800 rounded-lg p-5 hover:shadow-xl transition duration-300">
-            <strong className="text-green-400">Twitter Clone</strong>
-            <p className="text-gray-300 text-sm mt-1">MERN Stack, Auth, MongoDB</p>
-          </li>
-          <li className="border border-gray-800 rounded-lg p-5 hover:shadow-xl transition duration-300">
-            <strong className="text-green-400">AI Dashboard</strong>
-            <p className="text-gray-300 text-sm mt-1">Python, Streamlit, Pandas</p>
-          </li>
-          <li className="border border-gray-800 rounded-lg p-5 hover:shadow-xl transition duration-300">
-            <strong className="text-green-400">Insurance Portal</strong>
-            <p className="text-gray-300 text-sm mt-1">WordPress, PHP, Webhooks</p>
-          </li>
+        <ul className="grid md:grid-cols-2 gap-6 text-left">
+          {[
+            {
+              title: 'Twitter Clone',
+              tech: 'MERN Stack, Auth, MongoDB',
+            },
+            {
+              title: 'AI Dashboard',
+              tech: 'Python, Streamlit, Pandas',
+            },
+            {
+              title: 'Insurance Portal',
+              tech: 'WordPress, PHP, Webhooks',
+            },
+          ].map((proj) => (
+            <Tilt
+              key={proj.title}
+              tiltMaxAngleX={8}
+              tiltMaxAngleY={8}
+              perspective={1000}
+              scale={1.02}
+              transitionSpeed={400}
+              className="bg-[#111827] p-6 rounded-xl border border-gray-800 hover:shadow-2xl transition duration-300"
+            >
+              <strong className="text-green-400">{proj.title}</strong>
+              <p className="text-gray-300 text-sm mt-1">{proj.tech}</p>
+            </Tilt>
+          ))}
         </ul>
       </div>
     </section>
