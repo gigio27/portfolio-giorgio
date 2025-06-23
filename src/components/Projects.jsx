@@ -18,7 +18,7 @@ const Projects = () => {
               perspective={1000}
               scale={1.02}
               transitionSpeed={400}
-              className="bg-[#111827] p-6 rounded-xl border border-gray-800 hover:shadow-2xl transition duration-300"
+              className="bg-[#111827]/40 p-6 rounded-xl border border-gray-800 hover:shadow-2xl transition duration-300"
             >
               <h3 className="text-xl font-semibold text-white mb-1">{proj.title}</h3>
               <p className="text-gray-400 text-sm mb-2">{proj.description}</p>

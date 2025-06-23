@@ -44,7 +44,7 @@ const Skills = () => {
               perspective={1000}
               scale={1.02}
               transitionSpeed={400}
-              className="bg-gray-900 border border-gray-800 p-5 rounded-lg hover:shadow-2xl transition duration-300"
+              className="bg-[#111827]/40 border border-gray-800 p-5 rounded-lg hover:shadow-2xl transition duration-300"
             >
               <span className="text-green-400 font-semibold">{skill.title}</span>
               <p className="text-gray-300 mt-1 text-sm">{skill.tech}</p>

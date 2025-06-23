@@ -19,3 +19,8 @@ body {
   background-size: 200% 200%;
   animation: gradient-x 6s ease infinite;
 }
+
+canvas {
+  filter: blur(1px);
+}
+
