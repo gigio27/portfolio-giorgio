@@ -6,7 +6,7 @@ const HeroSection = () => {
   }, [])
 
   return (
-    <section className="relative h-screen w-full overflow-hidden bg-black text-white">
+    <section className="relative h-screen w-full overflow-hidden bg-transparent text-white z-[0]" >
       {/* Vidéo en arrière-plan */}
       <video
         autoPlay
@@ -25,12 +25,14 @@ const HeroSection = () => {
         <p className="text-lg md:text-2xl text-gray-300 mb-6 animate-fade-in-up delay-200">
           Full Stack Developer — MERN • C# • Python
         </p>
-        <a
-          href="#projects"
-          className="bg-green-500 hover:bg-green-600 active:scale-95 transition duration-300 ease-in-out text-white px-6 py-3 rounded-lg text-lg font-medium shadow-lg hover:shadow-xl"
-        >
-          Explore my work
-        </a>
+<a
+  href="#projects"
+  className="relative inline-block text-white px-6 py-3 rounded-lg text-lg font-medium shadow-lg hover:shadow-xl overflow-hidden transition duration-300 ease-in-out group"
+>
+  <span className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 animate-gradient-x blur-sm opacity-75 group-hover:opacity-100 transition-all duration-500 ease-in-out"></span>
+  <span className="relative z-10">Explore my work</span>
+</a>
+
       </div>
     </section>
   )
