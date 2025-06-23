@@ -1,5 +1,32 @@
 import Tilt from 'react-parallax-tilt';
 
+const techStack = [
+  {
+    title: 'Front-end',
+    tech: 'HTML, CSS, Bootstrap, JavaScript (ES6+), React',
+  },
+  {
+    title: 'Back-end',
+    tech: 'Node.js, Express, Python, PHP, C# (ASP.NET), SQL (MySQL, PostgreSQL), MongoDB, Firebase',
+  },
+  {
+    title: 'Cloud & DevOps',
+    tech: 'Heroku, Vercel, OVHCloud, Docker, Redis',
+  },
+  {
+    title: 'CMS & E-commerce',
+    tech: 'WordPress, WooCommerce, Shopify, Webhooks',
+  },
+  {
+    title: 'Marketing & SEO',
+    tech: 'SEO Optimization, Google Ads, Facebook Ads',
+  },
+  {
+    title: 'Tools & Testing',
+    tech: 'Git, REST APIs, Unit Testing',
+  },
+];
+
 const Skills = () => {
   return (
     <section id="skills" className="bg-black text-white py-20 px-4">
@@ -9,24 +36,7 @@ const Skills = () => {
         </h2>
 
         <ul className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
-          {[
-            {
-              title: 'Frontend & Backend JS',
-              tech: 'React, Node.js, Express, MongoDB',
-            },
-            {
-              title: 'Microsoft stack',
-              tech: 'C#, ASP.NET Core, Razor, SQL',
-            },
-            {
-              title: 'Python & Data',
-              tech: 'Python, Pandas, Web Scraping',
-            },
-            {
-              title: 'CMS & SEO',
-              tech: 'WordPress, WooCommerce, SEO, PHP',
-            },
-          ].map((skill, index) => (
+          {techStack.map((skill, index) => (
             <Tilt
               key={index}
               tiltMaxAngleX={8}
